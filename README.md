@@ -2,6 +2,15 @@
 
 etl-pipeline-application implements an ETL (Extract, Transform, Load) pipeline for processing health-related data from an external API `https://ghoapi.azureedge.net/api/Dimension` and storing it in a PostgreSQL database.
 
+# etl-pipeline-application Overview
+
+- In this Python script application, I've designed an ETL (Extract, Transform, Load) process to efficiently retrieve, transform, and store health-related data from a RESTful API into a PostgreSQL database.
+To maintain security, sensitive data such as API URLs and database credentials are loaded from a .env file using the dotenv library. The script employs the requests library to extract paginated data from the API,
+which is then transformed into a standardized format using the transform_data function. Validation of essential fields in the transformed data is ensured by the validate_data function. For the loading phase,
+the script establishes a connection to the database using psycopg2, creates a table (if it doesn't exist), and then inserts validated data into it. The main function orchestrates these steps,
+including resuming extraction from a saved state. Delays between API requests prevent overwhelming the API. The script incorporates error handling to address issues during the ETL process,
+ enhancing robustness and data reliability.
+
 ## Table of Contents
 
 - [Introduction](#introduction)
