@@ -71,7 +71,6 @@ class DataLoader:
                 )
 
             self.conn.commit()
-            print("Data loaded successfully.")
         except Exception as e:
             print("Error during data loading:", e)
         finally:
@@ -120,7 +119,6 @@ def main():
             """
             cursor.execute(create_table_query)
             conn.commit()
-            print("Table 'health_data' created or already exists.")
 
             # Load data into the database
             loader = DataLoader(conn, cursor)
