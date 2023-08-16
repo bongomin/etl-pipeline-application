@@ -33,6 +33,8 @@ The ETL pipeline script extracts data from an external API, transforms it into a
 ## Installation
 
 1. Clone the repository.
+- git clone git@github.com:bongomin/etl-pipeline-application.git
+- cd etl-pipeline-application
 2. Install the required packages by running: `pip install -r requirements.txt`
 
 ## Configuration
